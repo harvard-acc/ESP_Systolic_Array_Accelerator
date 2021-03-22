@@ -16,6 +16,12 @@
 * hls:  HLS folders with HLS scripts, directories to process files need to be addedd
 * matchlib: SystemC Matchlib library from Nvidia
 
+## SystemC and RTL Simulation Tools 
+* SystemC 2.3.1
+* Catapult 10.5b
+* Verdi O-2018.09-SP2-7
+* VCS O-2018.09-SP2-11
+
 ## AXI Configuration 
 * 0--0x00: dummy
 * 1--0x04: start signal (write only), fire interrupt upon completion
