@@ -2,16 +2,11 @@
 
 * 8-bit integer weight stationary systolic array 
 * Designed with Catapult HLS flow and SystemC coding
-* Reconfigurable array size N = 8, 16, or 32
-
-  /ESP_Systolic_Array_Accelerator/cmod/Systolic/include/SysSpec.h
-
+* Reconfigurable array size N = 8, 16, or 32 (/ESP_Systolic_Array_Accelerator/cmod/Systolic/include/SysSpec.h)
 
 ## Folder Structure
 * cmod: SystemC coding
-  * Top Module
-  
-    /ESP_Systolic_Array_Accelerator/cmod/Systolic/SysTop
+  * Top Module (/ESP_Systolic_Array_Accelerator/cmod/Systolic/SysTop)
 
 * hls:  HLS folders with HLS scripts, directories to process files need to be added
 * matchlib: SystemC Matchlib library from Nvidia (https://github.com/NVlabs/matchlib)
