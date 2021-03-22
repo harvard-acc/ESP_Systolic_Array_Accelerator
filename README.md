@@ -33,10 +33,10 @@
 * ----data[00-07]= "M-1" (8-bit, M: 1~256)
 * ----data[08-15]= use relu (1 bit)
 * ----data[16-19]= Bias left shift (4 bit)
-* ----data[20-23]= Accum right shift (4-bit)
-* ----data[24-31]= Accum mul (8-bit)
-* 3--0x0C: weight_read_base
-* 4--0x10: input_read_base
-* 5--0x14: input_write_base
+* ----data[20-23]= Accum right shift (4-bit), quantization
+* ----data[24-31]= Accum multiplier (8-bit), quantization
+* 3--0x0C: weight_read_base address
+* 4--0x10: input_read_base address
+* 5--0x14: input_write_base address
 * 6--0x18: flip memory buffer (no IRQ, write only)
 * 7--0x1C: dummy
