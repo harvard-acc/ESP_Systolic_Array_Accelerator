@@ -2,6 +2,7 @@
 
 * 8-bit integer weight stationary systolic array 
 * Reconfigurable array size N = 8, 16, or 32
+
   /ESP_Systolic_Array_Accelerator/cmod/Systolic/include/SysSpec.h
 
 ### AXI Configuration 
