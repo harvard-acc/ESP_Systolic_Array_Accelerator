@@ -14,7 +14,7 @@
     /ESP_Systolic_Array_Accelerator/cmod/Systolic/SysTop
 
 * hls:  HLS folders with HLS scripts, directories to process files need to be addedd
-* matchlib: SystemC Matchlib library from Nvidia
+* matchlib: SystemC Matchlib library from Nvidia (https://github.com/NVlabs/matchlib)
 
 ## SystemC and RTL Simulation Tools 
 * SystemC 2.3.1
