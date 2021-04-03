@@ -15,14 +15,6 @@
 #
 
 
-ifeq (Ubuntu,$(shell grep -o Ubuntu /etc/issue))
-        CRT_LIB_DIR = /usr/lib/x86_64-linux-gnu
-else
-        CRT_LIB_DIR = /usr/lib64
-endif
-
-
-# TOP = ~/cs148
 TOT := $(abspath $(dir $(lastword $(MAKEFILE_LIST)))../)
 
 # Location of submodules
@@ -30,9 +22,7 @@ CONNECTIONS_HOME ?= $(ROOT)/matchlib/connections
 RAPIDJSON_HOME ?= $(ROOT)/matchlib/rapidjson
 MATCHLIB_HOME ?= $(ROOT)/matchlib/cmod
 BOOST_HOME ?= /usr/local/boost/
-#SM6_HOME ?= $(ROOT)/cmod
 
-# (enyuyang 20200204 reomove boost (set implicity))
 export ROOT           ?= $(TOT)
 export TOP_NAME       ?= $(shell basename `pwd`)
 # Clock period in ns
@@ -45,7 +35,6 @@ export HLS_CATAPULT   ?= 1
 export RUN_SCVERIFY   ?= 0
 export SYSTEMC_DESIGN ?= 1
 
-# (enyuyang 20200206) add VCS
 export RUN_CDESIGN_CHECKER	?= 0
 
 # Default compiler flags set by switches below.
@@ -76,20 +65,6 @@ ifeq ($(RAND_STALL),1)
 endif
 
 export FSDB_VCS_RD_SC_VALPTR_PROTECT=1
-NOVAS_HOME = $(VERDI_HOME)
-#export NOVAS_HOME = /group/guyeon/cktcad/tools/synopsys/verdi/O-2018.09-SP2-7/
-# Use this for catapult 10.4b
-#export NOVAS_HOME = /group/guyeon/cktcad/tools/synopsys/verdi/N-2017.12-SP2-14/verdi/N-2017.12-SP2-14/
-
-#export NOVAS_LD_LIBRARY_PATH=/group/guyeon/cktcad/tools/synopsys/verdi/N-2017.12-SP2-14/verdi/N-2017.12-SP2-14/share/FsdbReader/LINUX64:/group/guyeon/cktcad/tools/synopsys/verdi/N-2017.12-SP2-14/verdi/N-2017.12-SP2-14/share/FsdbReader/LINUX:/group/guyeon/cktcad/tools/synopsys/verdi/N-2017.12-SP2-14/verdi/N-2017.12-SP2-14/share/FsdbWriter/LINUX64:/group/guyeon/cktcad/tools/synopsys/verdi/N-2017.12-SP2-14/verdi/N-2017.12-SP2-14/share/FsdbWriter/LINUX
-
-#export NOVAS_LD_LIBRARY_PATH=/group/guyeon/cktcad/tools/synopsys/verdi/O-2018.09-SP2-7/share/FsdbReader/Linux64:/group/guyeon/cktcad/tools/synopsys/verdi/O-2018.09-SP2-7/share/FsdbReader/Linux:/group/guyeon/cktcad/tools/synopsys/verdi/O-2018.09-SP2-7/share/FsdbWriter/Linux64:/group/guyeon/cktcad/tools/synopsys/verdi/O-2018.09-SP2-7/share/FsdbWriter/Linux
-
-#export NOVAS_LD_LIBRARY_PATH=/group/guyeon/cktcad/tools/synopsys/verdi/Load/N-2017.12-SP2-14/verdi/N-2017.12-SP2-14/share/FsdbReader/LINUX64:/group/guyeon/cktcad/tools/synopsys/verdi/N-2017.12-SP2-14/verdi/N-2017.12-SP2-14/share/FsdbWriter/LINUX64
-
-#export LD_LIBRARY_PATH=/group/guyeon/cktcad/tools/accellera/systemc-2.3.1/lib-linux64:/group/guyeon/cktcad/tools/synopsys/verdi/N-2017.12-SP2-14/verdi/N-2017.12-SP2-14/share/FsdbReader/LINUX64:/group/guyeon/cktcad/tools/synopsys/verdi/N-2017.12-SP2-14/verdi/N-2017.12-SP2-14/share/FsdbWriter/LINUX64
-
-#export NOVAS_HOME = /group/guyeon/cktcad/tools/synopsys/novas/
 
 hls: clean
 	export NOVAS_INST_DIR=$(NOVAS_HOME); \
@@ -113,8 +88,6 @@ vcs:
 
 cdc:
 	env RUN_CDESIGN_CHECKER=1 catapult -shell -product ultra -file go_hls.tcl
-	#$(ROOT)/hls/design_checker_summary.py
-	#cat DesignCheckSummary.csv
 
 .PHONY: clean
 clean:

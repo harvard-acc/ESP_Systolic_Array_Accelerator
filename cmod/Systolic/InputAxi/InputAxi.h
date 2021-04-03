@@ -1,8 +1,3 @@
-/*
- * VLSI Input Axi Master Port 
- *  
- */
-
 #ifndef __INPUTAXI_H__
 #define __INPUTAXI_H__
 

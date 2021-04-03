@@ -1,9 +1,3 @@
-/*
- *  VLSI Systolic Array Top Module
- *   
- *   
- */
-
 #ifndef __SYSTOP_H__
 #define __SYSTOP_H__
 

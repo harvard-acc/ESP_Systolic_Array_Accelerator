@@ -1,5 +1,5 @@
 /*
- * VLSI Systolic Array Module to include N*N of SysPEs
+ * Systolic Array Module to include N*N of SysPEs
  * Update 0531 extend function with bias add, shift mul 
  *   and related config
  */

@@ -4,8 +4,6 @@
 /* For Esp-Noc connections, we have two sets of AXI
  * 64-bit Axi Master "axi_data" for master data requests
  * 32-bit Axi Slave "axi_conf" for axi config
- * 
- *
  */
 
 #include <nvhls_int.h>

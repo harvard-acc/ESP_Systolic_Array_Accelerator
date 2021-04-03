@@ -21,14 +21,9 @@ ROOT ?= $(TOT)
 CONNECTIONS_HOME ?= $(ROOT)/connections
 RAPIDJSON_HOME ?= $(ROOT)/rapidjson
 
-## (enyuyang 20200204) add home variables 
-#MODULE ?= . /usr/share/Modules/init/sh; module load licenses/synopsys 
-# FIXME no boost/lib found, maybe include everything in /usr/local
-#BOOST_HOME ?= /usr/
-BOOST_HOME ?= /usr/local/boost/
-SYSTEMC_HOME ?= /group/guyeon/cktcad/tools/accellera/systemc-2.3.1
-CATAPULT_HOME ?= /group/guyeon/cktcad/tools/mentor/catapult/Catapult_Synthesis_10.5b-886011
-## 
+BOOST_HOME ?= 
+SYSTEMC_HOME ?= 
+CATAPULT_HOME ?= 
 
 CC = g++ 
 
@@ -41,7 +36,6 @@ INCDIR += -I$(MATCHLIB_HOME)/include
 LIBDIR ?=
 LIBDIR += -L. -L$(SYSTEMC_HOME)/lib-linux64 -L$(BOOST_HOME)/lib
 
-## (enyuyang 20200204) add -Wno-virtual-move-assign
 CFLAGS ?= 
 CFLAGS += -Wall -Wno-unknown-pragmas -Wno-virtual-move-assign -Wno-unused-local-typedefs -std=c++11 $(INCDIR) $(LIBDIR)
 

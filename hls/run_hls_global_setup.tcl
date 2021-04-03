@@ -21,15 +21,12 @@ solution options set /Output/PackageOutput false
 
 solution options set Input/CppStandard c++11
 
-#solution options set /Output/PackageOutput false
-##tjia
 solution options set /Output/PackageOutput true
 solution options set /Output/PackageStaticFiles true
 ##add prefix
 solution options set /Output/PrefixStaticFiles true
 #solution options set /Output/SubBlockNamePrefix "hu_sysarray"
 #solution options set /Output/DoNotModifyNames true
-#
 
 
 ## Use fsdb file for power flow - make sure your environment var $NOVAS_INST_DIR has been set before you launch Catapult.

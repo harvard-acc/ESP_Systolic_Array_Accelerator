@@ -1,13 +1,3 @@
-/* 
- *  
- * VLSI Lab2: Design of a Systolic Array Processing Element (PE)
- */
-
-/*
- *  INSTRUCTIONS
- *   
- */
-
 #ifndef __SYSPE_H__
 #define __SYSPE_H__
 

@@ -20,7 +20,6 @@ namespace eval nvhls {
         # Get all input variables set from Makefile
         global env
         set USER_VARS {TOP_NAME CLK_PERIOD SRC_PATH SEARCH_PATH HLS_CATAPULT RUN_SCVERIFY COMPILER_FLAGS SYSTEMC_DESIGN RUN_CDESIGN_CHECKER}
-        #set NOVAS_LD_LIBRARY_PATH "/group/guyeon/cktcad/tools/synopsys/verdi/N-2017.12-SP2-14/verdi/N-2017.12-SP2-14/share/FsdbReader/LINUX64:/group/guyeon/cktcad/tools/synopsys/verdi/N-2017.12-SP2-14/verdi/N-2017.12-SP2-14/share/FsdbWriter/LINUX64"
         
         echo "***USER SETTINGS***"
         foreach var $USER_VARS {

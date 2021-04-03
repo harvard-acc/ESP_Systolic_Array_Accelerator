@@ -14,7 +14,6 @@
 # limitations under the License.
 #
 
-# TOT = ~/cs148
 TOT := $(abspath $(dir $(lastword $(MAKEFILE_LIST)))../)
 ROOT ?= $(TOT)
 
@@ -22,14 +21,12 @@ ROOT ?= $(TOT)
 CONNECTIONS_HOME ?= $(ROOT)/matchlib/connections
 RAPIDJSON_HOME ?= $(ROOT)/matchlib/rapidjson
 MATCHLIB_HOME ?= $(ROOT)/matchlib/cmod
-#FLEXNLP_HOME ?= $(ROOT)/cmod
 
 
 # PLEASE SET BOOST_HOME, SYSTEMC_HOME, CATAPULT_HOME to correct path 
-BOOST_HOME ?= /usr/local/boost/
-#BOOST_HOME ?= /usr/local/
-SYSTEMC_HOME ?= /group/guyeon/cktcad/tools/accellera/systemc-2.3.1
-CATAPULT_HOME ?= /group/guyeon/cktcad/tools/mentor/catapult/Catapult_Synthesis_10.5b-886011
+BOOST_HOME ?= 
+SYSTEMC_HOME ?=
+CATAPULT_HOME ?= 
 # 
 
 CC = g++
@@ -39,13 +36,10 @@ INCDIR += -I. -I$(SYSTEMC_HOME)/include -I$(BOOST_HOME)/include -I$(CATAPULT_HOM
 INCDIR += -I$(CONNECTIONS_HOME)/include
 INCDIR += -I$(RAPIDJSON_HOME)/include 
 INCDIR += -I$(MATCHLIB_HOME)/include 
-#INCDIR += -I$(FLEXNLP_HOME)/include
-#INCDIR += -I$(FLEXNLP_HOME)
 
 LIBDIR ?=
 LIBDIR += -L. -L$(SYSTEMC_HOME)/lib-linux64 -L$(BOOST_HOME)/lib
 
-## Update 20200215 add -Wno-virtual-move-assign -Wno-unused-local-typedef
 CFLAGS ?= 
 CFLAGS += -Wall -Wno-unknown-pragmas -Wno-virtual-move-assign -Wno-unused-local-typedefs -std=c++11 $(INCDIR) $(LIBDIR)
 

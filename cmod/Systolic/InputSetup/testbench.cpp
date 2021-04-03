@@ -1,7 +1,3 @@
-/*
- * SysAttay testbench, for Harvard cs148/248 only
- */
-
 #include "InputSetup.h"
 #include "../include/SysSpec.h"
 #include "../include/utils.h"

@@ -1,22 +1,3 @@
-/*
- * SysTop testbench for Harvard cs148/248 only
- * TODO: copy and modify SlaveToRV to remove burst
- *       and WSTRB
- * Update: finish controller with random message
- * Update: add controller, 
- *   need to implement weight load with trigger and input trigger from axi
- *   * axi slave test bench with data preloaded (see axi/testbench)
- *   * integrate axi master to source for config controller with customized message
- *   * keep sink for now !!!
- * Update: 0605 finish testing config_reg[2-4]
- *   * "‘m’ may be used uninitialized" bug remains, might forget to reset a channel
- *   * TODO: implement verification of Input Read/Write (done)
- * Update: 0606 computation results of SysArray.h looks reasonable by cout debug code
- *   * TODO: check final results, we think the value write back to slave is correct
- *   *       but direct checking on the results in slave is strange 
- *   * Checked weight and bias for N=8 => correct
- */
-
 #include "SysTop.h"
 #include "../include/SysSpec.h"
 #include "../include/AxiSpec.h"

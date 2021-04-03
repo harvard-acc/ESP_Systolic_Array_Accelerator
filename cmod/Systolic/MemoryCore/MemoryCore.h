@@ -1,8 +1,3 @@
-/*
- * VLSI Input Loader module to include input SRAM and Data Setup 
- * Updae change M to M_1 
- */
-
 #ifndef __MEMORYCORE_H__
 #define __MEMORYCORE_H__
 

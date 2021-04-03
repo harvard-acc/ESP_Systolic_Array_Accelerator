@@ -1,7 +1,3 @@
-/*
- * Systolic Array PE created by En-Yu Yang at Harvard
- */
-
 #include "SysPE.h"
 #include <systemc.h>
 #include <mc_scverify.h>
