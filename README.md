@@ -1,4 +1,4 @@
-# ESP_Systolic_Array_Accelerator
+# A HLS based Systolic Array Accelerator
 
 * 8-bit integer weight stationary systolic array 
 * Designed with Catapult HLS flow and SystemC coding
